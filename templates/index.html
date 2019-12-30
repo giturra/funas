@@ -1,0 +1,583 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- ***** Listing Destinations Area Start ***** -->
+    <section class="dorne-listing-destinations-area section-padding-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="about-content text-center">
+                    <h2><span>Repositorio</span> de personas <span>Funadas</span></h2>
+                </div>
+                <!-- Hero Search Form -->
+                <div class="hero-search-form">
+                    <!-- Tabs -->
+                    <div class="nav nav-tabs" id="heroTab" role="tablist">
+                        <a class="nav-item nav-link active" id="nav-places-tab" data-toggle="tab" href="#nav-places" role="tab" aria-controls="nav-places" aria-selected="true">Buscar personas funadas</a>
+                        <a class="nav-item nav-link" id="nav-events-tab" data-toggle="tab" href="#nav-events" role="tab" aria-controls="nav-events" aria-selected="false">Agrega una funa</a>
+                    </div>
+                    <!-- Tabs Content -->
+                    <div class="tab-content" id="nav-tabContent">
+                        <div class="tab-pane fade show active" id="nav-places" role="tabpanel" aria-labelledby="nav-places-tab">
+                            <h6>Busca si una persona ha sido funada - <span style="color: black;">¿Cómo funciona el buscador?</span></h6>
+                            <form action="#" method="get">
+                                <input type="search" name="caviarSearch" id="search" placeholder="Ingresa nombres, apellidos, correos, redes sociales de la persona de interés" class="form-control">
+                                <button type="submit" class="btn dorne-btn"><i class="fa fa-search pr-2" aria-hidden="true"></i> Buscar</button>
+                            </form>
+                        </div>
+                        <div class="tab-pane fade" id="nav-events" role="tabpanel" aria-labelledby="nav-events-tab">
+                            <h6 style="display: none;">Formulario para agregar una Funa</h6>
+                            <form action="#" method="get">
+                            <div class="row center">
+                                <div class="col-6">
+                                    <h5>Datos de la Persona Funada</h5>
+                                    <p>
+                                        <input type="text" name="name" class="form-control" placeholder="Nombre">
+                                    </p>
+                                    <p style="color: red;">CREAR BUSCADOR DE NOMBRES PARA QUE NO SE CREEN DUPLICADOS</p>
+                                    <br />
+                                    <p>
+                                        <input type="email" name="email" class="form-control" placeholder="Correo">
+                                    </p>
+                                    <br />
+                                    <p>
+                                        <select class="custom-select" id="comuna">
+                                            <option selected>Comuna de residencia</option>
+                                            <option value="1">New York</option>
+                                            <option value="2">Latvia</option>
+                                            <option value="3">Dhaka</option>
+                                            <option value="4">Melbourne</option>
+                                            <option value="5">London</option>
+                                        </select>
+                                        <select class="custom-select" id="region">
+                                            <option selected>Región</option>
+                                            <option value="1">New York</option>
+                                            <option value="2">Latvia</option>
+                                            <option value="3">Dhaka</option>
+                                            <option value="4">Melbourne</option>
+                                            <option value="5">London</option>
+                                        </select>
+                                    </p>
+                                    <p style="color: red;">CONSTRUIR LOCALIDAD SUMANDO AMBAS WEÁS</p>
+                                </div>
+                                <div class="col-6">
+                                    <h5>Agrega las Funas</h5>
+                                    <div class="col-12 agregar-funa">
+                                        <h6>Funa #01</h6>
+                                        <p>
+                                            <input type="text" name="link-funa" class="form-control" placeholder="Link de la Funa en redes sociales">
+                                        </p>
+                                        <p>
+                                            <input type="text" name="tipo-link" class="form-control" placeholder="Tipo de Red Social">
+                                        </p>
+                                    </div>
+                                    <div class="col-12 agregar-funa">
+                                        <h6>Funa #012</h6>
+                                        <p>
+                                            <input type="text" name="link-funa" class="form-control" placeholder="Link de la Funa en redes sociales">
+                                        </p>
+                                        <p>
+                                            <input type="text" name="tipo-link" class="form-control" placeholder="Tipo de Red Social">
+                                        </p>
+                                    </div>
+                                    <div class="col-12 agregar-funa">
+                                        <button type="submit" class="btn dorne-btn"><i class="fa fa-plus" aria-hidden="true"></i> Agregar Funa a esta persona</button>
+                                    </div>
+                                </div>
+                                <div class="col-12 agregar-funa-final">
+                                    <p>Acepto los términos y condiciones de este servicio.</p>
+                                    <br />
+                                    <button type="submit" class="btn dorne-btn"><i class="fa fa-plus" aria-hidden="true"></i> Agregar persona al repositorio de funados</button>
+                                </div>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="about-content text-center">
+                    <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Fusce quis tempus elit. Sed efficitur tortor neque, vitae aliquet urna varius sit amet. Ut rhoncus, nunc nec tincidunt volutpat, ex libero.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="listing-menu-area mt-100 repositorio" id="menu">
+                    <h6>Resultados de la búsqueda</h6>
+                    <br />
+                    <!-- Single Listing Menu -->
+                    <div class="single-listing-menu d-flex justify-content-between">
+                        <!-- Listing Menu Title -->
+                        <div class="listing-menu-title">
+                            <h5>Nombre Apellido</h5>
+                            <p>Última funa agregada el <strong>FECHA PHP</strong>.</p>
+                        </div>
+                        <!-- Listing Menu Price -->
+                        <div class="listing-menu-price">
+                            <h6><a href="#" class="boton">Ver Funas (X en total)</a></h6>
+                        </div>
+                    </div>
+                    <!-- Single Listing Menu -->
+                    <div class="single-listing-menu d-flex justify-content-between">
+                        <!-- Listing Menu Title -->
+                        <div class="listing-menu-title">
+                            <h5>Nombre Apellido</h5>
+                            <p>Última funa agregada el <strong>FECHA PHP</strong>.</p>
+                        </div>
+                        <!-- Listing Menu Price -->
+                        <div class="listing-menu-price">
+                            <h6><a href="#" class="boton">Ver Funas (X en total)</a></h6>
+                        </div>
+                    </div>
+                    <!-- Single Listing Menu -->
+                    <div class="single-listing-menu d-flex justify-content-between">
+                        <!-- Listing Menu Title -->
+                        <div class="listing-menu-title">
+                            <h5>Nombre Apellido</h5>
+                            <p>Última funa agregada el <strong>FECHA PHP</strong>.</p>
+                        </div>
+                        <!-- Listing Menu Price -->
+                        <div class="listing-menu-price">
+                            <h6><a href="#" class="boton">Ver Funas (X en total)</a></h6>
+                        </div>
+                    </div>
+                    <!-- Single Listing Menu -->
+                    <div class="single-listing-menu d-flex justify-content-between">
+                        <!-- Listing Menu Title -->
+                        <div class="listing-menu-title">
+                            <h5>Nombre Apellido</h5>
+                            <p>Última funa agregada el <strong>FECHA PHP</strong>.</p>
+                        </div>
+                        <!-- Listing Menu Price -->
+                        <div class="listing-menu-price">
+                            <h6><a href="#" class="boton">Ver Funas (X en total)</a></h6>
+                        </div>
+                    </div>
+                    <p class="center"><a href="#" class="btn dorne-btn mt-50">Buscar nuevamente</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ***** About Area End ***** -->
+
+    <!-- ***** Editor Pick Area Start ***** -->
+    <section class="dorne-editors-pick-area bg-img bg-overlay-9 section-padding-100" style="background-image: url(img/bg-img/hero-2.jpg);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <span></span>
+                    <h4>Cities you must see</h4>
+                    <p>Editor’s pick</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.2s">
+                    <img src="{% static 'img/bg-img/editor-1.jpg' %}" alt="">
+                    <div class="editors-pick-info">
+                        <div class="places-total-destinations d-flex">
+                            <a href="#" class="boton">New York</a>
+                            <a href="#" class="boton">1643 Destinations</a>
+                        </div>
+                        <div class="add-more">
+                            <a href="#" class="boton">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.4s">
+                    <img src="{% static 'img/bg-img/editor-2.jpg' %}" alt="">
+                    <div class="editors-pick-info">
+                        <div class="places-total-destinations d-flex">
+                            <a href="#" class="boton">Barcelona</a>
+                            <a href="#" class="boton">943 Destinations</a>
+                        </div>
+                        <div class="add-more">
+                            <a href="#" class="boton">+</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-editors-pick-area wow fadeInUp" data-wow-delay="0.6s">
+                    <img src="{% static 'img/bg-img/editor-3.jpg' %}" alt="">
+                    <div class="editors-pick-info">
+                        <div class="places-total-destinations d-flex">
+                            <a href="#" class="boton">paris</a>
+                            <a href="#" class="boton">243 Destinations</a>
+                        </div>
+                        <div class="add-more">
+                            <a href="#" class="boton">+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ***** Editor Pick Area End ***** -->
+
+    <!-- ***** Features Destinations Area Start ***** -->
+    <section class="dorne-features-destinations-area">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading dark text-center">
+                    <span></span>
+                    <h4>Featured destinations</h4>
+                    <p>Editor’s pick</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="features-slides owl-carousel">
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-1.jpg' %}" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>FROM $59/night</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Ibiza</h5>
+                                <p>Party</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-2.jpg' %}" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>FROM $59/night</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Paris</h5>
+                                <p>Luxury</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-3.jpg' %}" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>FROM $59/night</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Lake Como</h5>
+                                <p>Spectacular</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-4.jpg' %}" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>FROM $59/night</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Greece</h5>
+                                <p>Sunny</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-5.jpg' %}" alt="">
+                        <!-- Price -->
+                        <div class="price-start">
+                            <p>FROM $59/night</p>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Norway</h5>
+                                <p>All Year round</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ***** Features Destinations Area End ***** -->
+
+    <!-- ***** Features Restaurant Area Start ***** -->
+    <section class="dorne-features-restaurant-area bg-default">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <span></span>
+                    <h4>Featured Restaurants</h4>
+                    <p>Editor’s pick</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="features-slides owl-carousel">
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-6.jpg' %}" alt="">
+                        <!-- Rating & Map Area -->
+                        <div class="ratings-map-area d-flex">
+                            <a href="#" class="boton">8.5</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Martha’s bar</h5>
+                                <p>Manhathan</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-7.jpg' %}" alt="">
+                        <!-- Rating & Map Area -->
+                        <div class="ratings-map-area d-flex">
+                            <a href="#" class="boton">9.5</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Delux Restaurant</h5>
+                                <p>Paris</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-8.jpg' %}" alt="">
+                        <!-- Rating & Map Area -->
+                        <div class="ratings-map-area d-flex">
+                            <a href="#" class="boton">8.2</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Jim’s corner Pub</h5>
+                                <p>Madrid</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-9.jpg' %}" alt="">
+                        <!-- Rating & Map Area -->
+                        <div class="ratings-map-area d-flex">
+                            <a href="#" class="boton">8.7</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>tower Risto bar</h5>
+                                <p>Sydney</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single Features Area -->
+                    <div class="single-features-area">
+                        <img src="{% static 'img/bg-img/feature-10.jpg' %}" alt="">
+                        <!-- Rating & Map Area -->
+                        <div class="ratings-map-area d-flex">
+                            <a href="#" class="boton">9.8</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                        <div class="feature-content d-flex align-items-center justify-content-between">
+                            <div class="feature-title">
+                                <h5>Pizzeria venezia</h5>
+                                <p>Hong Kong</p>
+                            </div>
+                            <div class="feature-favourite">
+                                <a href="#" class="boton"><i class="fa fa-heart-o" aria-hidden="true"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ***** Features Restaurant Area End ***** -->
+
+    <!-- ***** Features Events Area Start ***** -->
+    <section class="dorne-features-events-area bg-img bg-overlay-9 section-padding-100-50" style="background-image: url(img/bg-img/hero-3.jpg)">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <span></span>
+                    <h4>Featured events</h4>
+                    <p>Editor’s pick</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.2s">
+                    <div class="feature-events-thumb">
+                        <img src="{% static 'img/bg-img/event-1.jpg' %}" alt="">
+                        <div class="date-map-area d-flex">
+                            <a href="#" class="boton">26 Nov</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="feature-events-content">
+                        <h5>Jazz Concert</h5>
+                        <h6>Manhathan</h6>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                    </div>
+                    <div class="feature-events-details-btn">
+                        <a href="#" class="boton">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.3s">
+                    <div class="feature-events-thumb">
+                        <img src="{% static 'img/bg-img/event-2.jpg' %}" alt="">
+                        <div class="date-map-area d-flex">
+                            <a href="#" class="boton">26 Nov</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="feature-events-content">
+                        <h5>DeeJay in the house</h5>
+                        <h6>Manhathan</h6>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                    </div>
+                    <div class="feature-events-details-btn">
+                        <a href="#" class="boton">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.4s">
+                    <div class="feature-events-thumb">
+                        <img src="{% static 'img/bg-img/event-3.jpg' %}" alt="">
+                        <div class="date-map-area d-flex">
+                            <a href="#" class="boton">26 Nov</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="feature-events-content">
+                        <h5>Theatre Night outside</h5>
+                        <h6>Manhathan</h6>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                    </div>
+                    <div class="feature-events-details-btn">
+                        <a href="#" class="boton">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.5s">
+                    <div class="feature-events-thumb">
+                        <img src="{% static 'img/bg-img/event-4.jpg' %}" alt="">
+                        <div class="date-map-area d-flex">
+                            <a href="#" class="boton">26 Nov</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="feature-events-content">
+                        <h5>Wine tasting</h5>
+                        <h6>Manhathan</h6>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                    </div>
+                    <div class="feature-events-details-btn">
+                        <a href="#" class="boton">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.6s">
+                    <div class="feature-events-thumb">
+                        <img src="{% static 'img/bg-img/event-5.jpg' %}" alt="">
+                        <div class="date-map-area d-flex">
+                            <a href="#" class="boton">26 Nov</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="feature-events-content">
+                        <h5>New Moon Party</h5>
+                        <h6>Manhathan</h6>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                    </div>
+                    <div class="feature-events-details-btn">
+                        <a href="#" class="boton">+</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-6">
+                <div class="single-feature-events-area d-sm-flex align-items-center wow fadeInUpBig" data-wow-delay="0.7s">
+                    <div class="feature-events-thumb">
+                        <img src="{% static 'img/bg-img/event-6.jpg' %}" alt="">
+                        <div class="date-map-area d-flex">
+                            <a href="#" class="boton">26 Nov</a>
+                            <a href="#" class="boton"><img src="{% static 'img/core-img/map.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                    <div class="feature-events-content">
+                        <h5>Happy hour at pub</h5>
+                        <h6>Manhathan</h6>
+                        <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra...</p>
+                    </div>
+                    <div class="feature-events-details-btn">
+                        <a href="#" class="boton">+</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- ***** Features Events Area End ***** -->
+
+{% endblock content %}
